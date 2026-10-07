@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кирпичик — ремонт квартир (демо)</title>
+<style>
+  /* Нарочно «агрессивные» стили сайта: виджет в Shadow DOM должен остаться нетронутым */
+  * { box-sizing: border-box; }
+  button, input, textarea, div { font-family: "Times New Roman", serif !important; }
+  body { margin: 0; font-family: Georgia, serif; color: #2B2118; background: #FBF7F2; }
+  header { background: #2B2118; color: #FBF7F2; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+  header b { font-size: 22px; letter-spacing: .5px; } header span { font-size: 14px; opacity: .8; }
+  .hero { padding: 56px 24px; max-width: 900px; margin: 0 auto; }
+  .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; }
+  .hero p { font-size: 18px; line-height: 1.5; max-width: 620px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 0 24px 56px; max-width: 900px; margin: 0 auto; }
+  .card { background: #fff; border: 1px solid #E8DCCB; border-radius: 12px; padding: 18px; }
+  .card b { display: block; font-size: 18px; margin-bottom: 6px; } .card span { color: #E8590C; font-weight: bold; }
+  .note { max-width: 900px; margin: 0 auto 80px; padding: 0 24px; font-size: 13px; color: #8A7A66; }
+</style>
+</head>
+<body>
+<header><b>🧱 Кирпичик</b><span>ремонт квартир · Новосибирск</span></header>
+<section class="hero">
+  <h1>Ремонт квартир под ключ с фиксированной сметой</h1>
+  <p>Бесплатный замер, смета за 2 дня, гарантия 2 года. Задайте вопрос консультанту в углу экрана — он ответит сразу.</p>
+</section>
+<section class="cards">
+  <div class="card"><b>Косметический</b>от <span>4 500 ₽/м²</span></div>
+  <div class="card"><b>Капитальный</b>от <span>9 500 ₽/м²</span></div>
+  <div class="card"><b>Санузел под ключ</b>от <span>180 000 ₽</span></div>
+  <div class="card"><b>Дизайн-проект</b><span>1 500 ₽/м²</span></div>
+</section>
+<p class="note">Демо-страница вымышленной компании для показа виджета AI-ассистента. Стили страницы нарочно «ломающие» —
+виджет изолирован в Shadow DOM и выглядит одинаково на любом сайте.</p>
+
+<script src="/widget.js" data-title="Кирпичик · консультант" data-subtitle="Ответит про цены, сроки и гарантию"
+        data-color="#E8590C" async></script>
+</body>
+</html>
